@@ -1,0 +1,480 @@
+Creating orderer.example.com ... done
+# #######Caliper Test######
+docker-compose -f network/fabric/simplenetwork/docker-compose.yaml up -d
+Creating peer0.org1.example.com ... done
+Creating peer1.org1.example.com ... done
+Creating orderer.example.com ... 
+Creating ca_peerOrg1 ... 
+Creating ca_peerOrg2 ... 
+Creating peer0.org1.example.com ... 
+Creating peer1.org2.example.com ... 
+Creating peer0.org2.example.com ... 
+Creating peer1.org1.example.com ... 
+# create mychannel......
+ok 1 created mychannel successfully
+# Sleep 5s......
+# Join channel......
+# join mychannel
+ok 2 Successfully joined mychannel
+# install all chaincodes......
+info: [packager/Golang.js]: packaging GOLANG from contract/fabric/simple
+info: [packager/Golang.js]: packaging GOLANG from contract/fabric/simple
+ok 3 Installed chaincode simple successfully in all peers
+# Instantiate chaincode......
+The chaincode instantiate transaction was valid.
+ok 4 Instantiated chaincode simple successfully 
+# Sleep 5s...
+# ##### testing 'open' ######
+----test round 0----
+started monitor successfully
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 50 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 0 }
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 50 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 1 }
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 50 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 4 }
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 50 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 2 }
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 50 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 3 }
+[Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0
+[Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0
+[Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0
+[Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0
+Info: client 7327 start test runFixedNumber():opening accounts
+***** { type: 'fixed-rate', opts: { tps: 50 } }
+Info: client 7321 start test runFixedNumber():opening accounts
+***** { type: 'fixed-rate', opts: { tps: 50 } }
+[Transaction Info] - Submitted: 0 Succ: 0 Fail:0 Unfinished:0
+Info: client 7309 start test runFixedNumber():opening accounts
+***** { type: 'fixed-rate', opts: { tps: 50 } }
+Info: client 7314 start test runFixedNumber():opening accounts
+***** { type: 'fixed-rate', opts: { tps: 50 } }
+Info: client 7316 start test runFixedNumber():opening accounts
+***** { type: 'fixed-rate', opts: { tps: 50 } }
+[Transaction Info] - Submitted: 4 Succ: 0 Fail:0 Unfinished:4
+Client exited
+Client exited
+[Transaction Info] - Submitted: 92 Succ: 0 Fail:0 Unfinished:92
+[Transaction Info] - Submitted: 92 Succ: 0 Fail:0 Unfinished:92
+[Transaction Info] - Submitted: 154 Succ: 20 Fail:0 Unfinished:134
+[Transaction Info] - Submitted: 154 Succ: 20 Fail:0 Unfinished:134
+[Transaction Info] - Submitted: 215 Succ: 44 Fail:0 Unfinished:171
+[Transaction Info] - Submitted: 245 Succ: 66 Fail:0 Unfinished:179
+[Transaction Info] - Submitted: 255 Succ: 75 Fail:0 Unfinished:180
+[Transaction Info] - Submitted: 336 Succ: 118 Fail:0 Unfinished:218
+[Transaction Info] - Submitted: 336 Succ: 118 Fail:0 Unfinished:218
+[Transaction Info] - Submitted: 397 Succ: 160 Fail:0 Unfinished:237
+[Transaction Info] - Submitted: 397 Succ: 160 Fail:0 Unfinished:237
+[Transaction Info] - Submitted: 457 Succ: 230 Fail:0 Unfinished:227
+[Transaction Info] - Submitted: 457 Succ: 230 Fail:0 Unfinished:227
+[Transaction Info] - Submitted: 518 Succ: 265 Fail:0 Unfinished:253
+[Transaction Info] - Submitted: 518 Succ: 265 Fail:0 Unfinished:253
+[Transaction Info] - Submitted: 578 Succ: 313 Fail:0 Unfinished:265
+[Transaction Info] - Submitted: 607 Succ: 333 Fail:0 Unfinished:274
+[Transaction Info] - Submitted: 615 Succ: 352 Fail:0 Unfinished:263
+[Transaction Info] - Submitted: 615 Succ: 386 Fail:0 Unfinished:229
+[Transaction Info] - Submitted: 615 Succ: 433 Fail:0 Unfinished:182
+[Transaction Info] - Submitted: 615 Succ: 474 Fail:0 Unfinished:141
+[Transaction Info] - Submitted: 615 Succ: 524 Fail:0 Unfinished:91
+[Transaction Info] - Submitted: 615 Succ: 542 Fail:0 Unfinished:73
+[Transaction Info] - Submitted: 615 Succ: 595 Fail:0 Unfinished:20
+[Transaction Info] - Submitted: 615 Succ: 600 Fail:0 Unfinished:15
+###test result:###
++------+------+------+-----------+-------------+-------------+-------------+----------------+------------+
+| Name | Succ | Fail | Send Rate | Max Latency | Min Latency | Avg Latency | 75%ile Latency | Throughput |
+|------|------|------|-----------|-------------|-------------|-------------|----------------|------------|
+| open | 600  | 0    | 29 tps    | 12.74 s     | 2.98 s      | 7.36 s      | 9.29 s         | 21 tps     |
++------+------+------+-----------+-------------+-------------+-------------+----------------+------------+
+
+### resource stats ###
++---------+-----------------------------------+-------------+-------------+----------+----------+------------+-------------+
+| TYPE    | NAME                              | Memory(max) | Memory(avg) | CPU(max) | CPU(avg) | Traffic In | Traffic Out |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Process | node local-client.js(avg)         | 93.9MB      | 89.8MB      | 49.52%   | 20.97%   | -          | -           |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | dev-peer0.org2.example.co...le-v0 | 17.1MB      | 16.4MB      | 6.67%    | 3.68%    | 849.1KB    | 451.8KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | dev-peer1.org1.example.co...le-v0 | 19.5MB      | 18.8MB      | 8.95%    | 4.71%    | 1.1MB      | 545.5KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | dev-peer1.org2.example.co...le-v0 | 19.2MB      | 18.3MB      | 5.43%    | 2.39%    | 528.4KB    | 294.9KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | dev-peer0.org1.example.co...le-v0 | 16.8MB      | 16.7MB      | 1.55%    | 0.15%    | 34.8KB     | 19.1KB      |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | peer1.org1.example.com            | 90.9MB      | 74.5MB      | 64.50%   | 42.59%   | 3.7MB      | 4.3MB       |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | peer0.org2.example.com            | 79.6MB      | 63.9MB      | 54.47%   | 35.30%   | 3.3MB      | 3.6MB       |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | peer0.org1.example.com            | 71.8MB      | 59.9MB      | 35.07%   | 19.74%   | 2.3MB      | 126.0KB     |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | peer1.org2.example.com            | 78.5MB      | 63.8MB      | 48.42%   | 28.70%   | 2.9MB      | 3.1MB       |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | ca_peerOrg2                       | 18.0MB      | 18.0MB      | 0.00%    | 0.00%    | 0B         | 0B          |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | ca_peerOrg1                       | 18.5MB      | 18.5MB      | 0.00%    | 0.00%    | 0B         | 0B          |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | orderer.example.com               | 38.6MB      | 32.8MB      | 24.38%   | 12.63%   | 2.7MB      | 9.4MB       |
+|---------|-----------------------------------|-------------|-------------|----------|----------|------------|-------------|
+| Docker  | couchdb                           | 54.3MB      | 54.2MB      | 3.11%    | 1.47%    | 0B         | 0B          |
++---------+-----------------------------------+-------------+-------------+----------+----------+------------+-------------+
+
+ok 5 passed 'open' testing
+wait 5 seconds for next round...
+[Transaction Info] - Submitted: 615 Succ: 600 Fail:0 Unfinished:15
+[Transaction Info] - Submitted: 615 Succ: 600 Fail:0 Unfinished:15
+[Transaction Info] - Submitted: 615 Succ: 600 Fail:0 Unfinished:15
+[Transaction Info] - Submitted: 615 Succ: 600 Fail:0 Unfinished:15
+[Transaction Info] - Submitted: 615 Succ: 600 Fail:0 Unfinished:15
+----test round 1----
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 100 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 1 }
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 100 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 0 }
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 100 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 3 }
+not ok 6 failed 'open' testing, Error: Client encountered unexpected error at ChildProcess.<anonymous> (/root/caliper/src/comm/client/client-util.js:81:32) at emitOne (events.js:116:13) at ChildProcess.emit (events.js:211:7) at ChildProcess.target.send (internal/child_process.js:592:12) at Object.startTest (/root/caliper/src/comm/client/client-util.js:146:24) at Client._startLocalTest (/root/caliper/src/comm/client/client.js:223:27) at Client.startTest (/root/caliper/src/comm/client/client.js:146:22) at prev.then (/root/caliper/src/comm/bench-flow.js:238:31) at <anonymous>
+  ---
+    operator: fail
+    at: client.startTest.then.then.catch (/root/caliper/src/comm/bench-flow.js:254:23)
+    stack: |-
+      Error: failed 'open' testing, Error: Client encountered unexpected error
+          at ChildProcess.<anonymous> (/root/caliper/src/comm/client/client-util.js:81:32)
+          at emitOne (events.js:116:13)
+          at ChildProcess.emit (events.js:211:7)
+          at ChildProcess.target.send (internal/child_process.js:592:12)
+          at Object.startTest (/root/caliper/src/comm/client/client-util.js:146:24)
+          at Client._startLocalTest (/root/caliper/src/comm/client/client.js:223:27)
+          at Client.startTest (/root/caliper/src/comm/client/client.js:146:22)
+          at prev.then (/root/caliper/src/comm/bench-flow.js:238:31)
+          at <anonymous>
+          at Test.assert [as _assert] (/root/caliper/node_modules/tape/lib/test.js:225:54)
+          at Test.bound [as _assert] (/root/caliper/node_modules/tape/lib/test.js:77:32)
+          at Test.fail (/root/caliper/node_modules/tape/lib/test.js:318:10)
+          at Test.bound [as fail] (/root/caliper/node_modules/tape/lib/test.js:77:32)
+          at client.startTest.then.then.catch (/root/caliper/src/comm/bench-flow.js:254:23)
+          at <anonymous>
+  ...
+----test round 2----
+not ok 7 failed 'open' testing, Error: Client encountered unexpected error at ChildProcess.<anonymous> (/root/caliper/src/comm/client/client-util.js:81:32) at emitOne (events.js:116:13) at ChildProcess.emit (events.js:211:7) at ChildProcess.target.send (internal/child_process.js:592:12) at Object.startTest (/root/caliper/src/comm/client/client-util.js:146:24) at Client._startLocalTest (/root/caliper/src/comm/client/client.js:223:27) at Client.startTest (/root/caliper/src/comm/client/client.js:146:22) at prev.then (/root/caliper/src/comm/bench-flow.js:238:31) at <anonymous>
+  ---
+    operator: fail
+    at: client.startTest.then.then.catch (/root/caliper/src/comm/bench-flow.js:254:23)
+    stack: |-
+      Error: failed 'open' testing, Error: Client encountered unexpected error
+          at ChildProcess.<anonymous> (/root/caliper/src/comm/client/client-util.js:81:32)
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 150 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 3 }
+          at emitOne (events.js:116:13)
+          at ChildProcess.emit (events.js:211:7)
+          at ChildProcess.target.send (internal/child_process.js:592:12)
+          at Object.startTest (/root/caliper/src/comm/client/client-util.js:146:24)
+          at Client._startLocalTest (/root/caliper/src/comm/client/client.js:223:27)
+          at Client.startTest (/root/caliper/src/comm/client/client.js:146:22)
+          at prev.then (/root/caliper/src/comm/bench-flow.js:238:31)
+          at <anonymous>
+          at Test.assert [as _assert] (/root/caliper/node_modules/tape/lib/test.js:225:54)
+          at Test.bound [as _assert] (/root/caliper/node_modules/tape/lib/test.js:77:32)
+          at Test.fail (/root/caliper/node_modules/tape/lib/test.js:318:10)
+          at Test.bound [as fail] (/root/caliper/node_modules/tape/lib/test.js:77:32)
+          at client.startTest.then.then.catch (/root/caliper/src/comm/bench-flow.js:254:23)
+          at <anonymous>
+  ...
+# ##### testing 'query' ######
+----test round 3----
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 150 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 0 }
+not ok 8 failed 'query' testing, Error: Client encountered unexpected error at ChildProcess.<anonymous> (/root/caliper/src/comm/client/client-util.js:81:32) at emitOne (events.js:116:13) at ChildProcess.emit (events.js:211:7) at ChildProcess.target.send (internal/child_process.js:592:12) at Object.startTest (/root/caliper/src/comm/client/client-util.js:146:24) at Client._startLocalTest (/root/caliper/src/comm/client/client.js:223:27) at Client.startTest (/root/caliper/src/comm/client/client.js:146:22) at prev.then (/root/caliper/src/comm/bench-flow.js:238:31) at <anonymous>
+  ---
+    operator: fail
+    at: client.startTest.then.then.catch (/root/caliper/src/comm/bench-flow.js:254:23)
+    stack: |-
+      Error: failed 'query' testing, Error: Client encountered unexpected error
+          at ChildProcess.<anonymous> (/root/caliper/src/comm/client/client-util.js:81:32)
+          at emitOne (events.js:116:13)
+          at ChildProcess.emit (events.js:211:7)
+          at ChildProcess.target.send (internal/child_process.js:592:12)
+          at Object.startTest (/root/caliper/src/comm/client/client-util.js:146:24)
+doTest() with: { type: 'test',
+  label: 'query',
+  rateControl: { type: 'fixed-rate', opts: { tps: 100 } },
+  trim: 0,
+  cb: 'benchmark/simple/query.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 1000,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 3 }
+          at Client._startLocalTest (/root/caliper/src/comm/client/client.js:223:27)
+          at Client.startTest (/root/caliper/src/comm/client/client.js:146:22)
+          at prev.then (/root/caliper/src/comm/bench-flow.js:238:31)
+          at <anonymous>
+          at Test.assert [as _assert] (/root/caliper/node_modules/tape/lib/test.js:225:54)
+          at Test.bound [as _assert] (/root/caliper/node_modules/tape/lib/test.js:77:32)
+          at Test.fail (/root/caliper/node_modules/tape/lib/test.js:318:10)
+          at Test.bound [as fail] (/root/caliper/node_modules/tape/lib/test.js:77:32)
+          at client.startTest.then.then.catch (/root/caliper/src/comm/bench-flow.js:254:23)
+          at <anonymous>
+  ...
+----test round 4----
+doTest() with: { type: 'test',
+  label: 'open',
+  rateControl: { type: 'fixed-rate', opts: { tps: 150 } },
+  trim: 0,
+  args: { money: 10000 },
+  cb: 'benchmark/simple/open.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 200,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 1 }
+not ok 9 failed 'query' testing, Error: Client encountered unexpected error at ChildProcess.<anonymous> (/root/caliper/src/comm/client/client-util.js:81:32) at emitOne (events.js:116:13) at ChildProcess.emit (events.js:211:7) at ChildProcess.target.send (internal/child_process.js:592:12) at Object.startTest (/root/caliper/src/comm/client/client-util.js:146:24) at Client._startLocalTest (/root/caliper/src/comm/client/client.js:223:27) at Client.startTest (/root/caliper/src/comm/client/client.js:146:22) at prev.then (/root/caliper/src/comm/bench-flow.js:238:31) at <anonymous>
+  ---
+    operator: fail
+    at: client.startTest.then.then.catch (/root/caliper/src/comm/bench-flow.js:254:23)
+    stack: |-
+      Error: failed 'query' testing, Error: Client encountered unexpected error
+doTest() with: { type: 'test',
+  label: 'query',
+  rateControl: { type: 'fixed-rate', opts: { tps: 100 } },
+  trim: 0,
+  cb: 'benchmark/simple/query.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 1000,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 0 }
+          at ChildProcess.<anonymous> (/root/caliper/src/comm/client/client-util.js:81:32)
+          at emitOne (events.js:116:13)
+          at ChildProcess.emit (events.js:211:7)
+          at ChildProcess.target.send (internal/child_process.js:592:12)
+          at Object.startTest (/root/caliper/src/comm/client/client-util.js:146:24)
+          at Client._startLocalTest (/root/caliper/src/comm/client/client.js:223:27)
+          at Client.startTest (/root/caliper/src/comm/client/client.js:146:22)
+          at prev.then (/root/caliper/src/comm/bench-flow.js:238:31)
+          at <anonymous>
+          at Test.assert [as _assert] (/root/caliper/node_modules/tape/lib/test.js:225:54)
+          at Test.bound [as _assert] (/root/caliper/node_modules/tape/lib/test.js:77:32)
+          at Test.fail (/root/caliper/node_modules/tape/lib/test.js:318:10)
+          at Test.bound [as fail] (/root/caliper/node_modules/tape/lib/test.js:77:32)
+doTest() with: { type: 'test',
+  label: 'query',
+  rateControl: { type: 'fixed-rate', opts: { tps: 200 } },
+  trim: 0,
+  cb: 'benchmark/simple/query.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 1000,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 3 }
+          at client.startTest.then.then.catch (/root/caliper/src/comm/bench-flow.js:254:23)
+          at <anonymous>
+  ...
+doTest() with: { type: 'test',
+  label: 'query',
+  rateControl: { type: 'fixed-rate', opts: { tps: 100 } },
+  trim: 0,
+  cb: 'benchmark/simple/query.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 1000,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 1 }
+----------finished test----------
+
+###all test results:###
++------+------+------+------+-----------+-------------+-------------+-------------+----------------+------------+
+| Test | Name | Succ | Fail | Send Rate | Max Latency | Min Latency | Avg Latency | 75%ile Latency | Throughput |
+|------|------|------|------|-----------|-------------|-------------|-------------|----------------|------------|
+| 1    | open | 600  | 0    | 29 tps    | 12.74 s     | 2.98 s      | 7.36 s      | 9.29 s         | 21 tps     |
++------+------+------+------+-----------+-------------+-------------+-------------+----------------+------------+
+
+doTest() with: { type: 'test',
+  label: 'query',
+  rateControl: { type: 'fixed-rate', opts: { tps: 200 } },
+  trim: 0,
+  cb: 'benchmark/simple/query.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 1000,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 1 }
+doTest() with: { type: 'test',
+  label: 'query',
+  rateControl: { type: 'fixed-rate', opts: { tps: 200 } },
+  trim: 0,
+  cb: 'benchmark/simple/query.js',
+  config: 'benchmark/simple/fabric.json',
+  numb: 1000,
+  totalClients: 5,
+  clients: 5,
+  clientargs: {},
+  clientIdx: 0 }
+### resource stats (maximum) ###
++---------+-----------------------------------+-------------+----------+------------+-------------+
+| TYPE    | NAME                              | Memory(max) | CPU(max) | Traffic In | Traffic Out |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Process | node local-client.js(avg)         | 93.9MB      | 49.52%   | -          | -           |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | dev-peer0.org2.example.co...le-v0 | 17.1MB      | 6.67%    | 849.1KB    | 451.8KB     |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | dev-peer1.org1.example.co...le-v0 | 19.5MB      | 8.95%    | 1.1MB      | 545.5KB     |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | dev-peer1.org2.example.co...le-v0 | 19.2MB      | 5.43%    | 528.4KB    | 294.9KB     |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | dev-peer0.org1.example.co...le-v0 | 16.8MB      | 1.55%    | 34.8KB     | 19.1KB      |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | peer1.org1.example.com            | 90.9MB      | 64.50%   | 3.7MB      | 4.4MB       |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | peer0.org2.example.com            | 79.6MB      | 54.47%   | 3.3MB      | 3.6MB       |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | peer0.org1.example.com            | 71.8MB      | 35.07%   | 2.3MB      | 126.0KB     |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | peer1.org2.example.com            | 78.5MB      | 48.42%   | 2.9MB      | 3.1MB       |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | ca_peerOrg2                       | 18.0MB      | 0.00%    | 0B         | 0B          |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | ca_peerOrg1                       | 18.5MB      | 0.00%    | 0B         | 0B          |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | orderer.example.com               | 38.6MB      | 24.38%   | 2.7MB      | 9.4MB       |
+|---------|-----------------------------------|-------------|----------|------------|-------------|
+| Docker  | couchdb                           | 54.6MB      | 3.11%    | 0B         | 0B          |
++---------+-----------------------------------+-------------+----------+------------+-------------+
+
+[Transaction Info] - Submitted: 615 Succ: 600 Fail:0 Unfinished:15
+Generated report at /root/caliper/report20180527T030539.html
+docker-compose -f network/fabric/simplenetwork/docker-compose.yaml down;docker rm $(docker ps -aq)
+Client exited
+Client exited
+Client exited
+Stopping peer1.org1.example.com ... done
+Stopping peer0.org2.example.com ... done
+Stopping peer0.org1.example.com ... done
+Stopping peer1.org2.example.com ... done
+Stopping ca_peerOrg2            ... done
+Stopping ca_peerOrg1            ... done
+Stopping orderer.example.com    ... done
+Stopping couchdb                ... done
+Removing peer1.org1.example.com ... done
+Removing peer0.org2.example.com ... done
+Removing peer0.org1.example.com ... done
+Removing peer1.org2.example.com ... done
+Removing ca_peerOrg2            ... done
+Removing ca_peerOrg1            ... done
+Removing orderer.example.com    ... done
+Removing couchdb                ... done
+Removing network simplenetwork_default
+e4e3ef4fe2a7
+7afc85d0c678
+047dfc42d766
+01e6cde889db
+
+1..9
+# tests 9
+# pass  5
+# fail  4
